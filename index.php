@@ -29,6 +29,21 @@
                 <div class="col-sm-8">
                     <h5>Los campos con (*) son obligatorios</h5>
                 </div>
+                
+                    <!-- mensajes --> 
+                    <?php if (isset($_GET['mensaje'])) : ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong><?php echo $_GET['mensaje'];?></strong> 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif ?>
+
+                    <!-- error --> 
+                    <?php if (isset($_GET['error'])) : ?>
+                        <h6 class="bg-danger text-white"><?php echo $_GET['error']; ?></h6>
+                    <?php endif ?>
+                    <!-- end error -->
+
             </div>
             <div class="row">                
                 <div class="col-sm-6">

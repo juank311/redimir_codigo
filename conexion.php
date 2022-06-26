@@ -21,7 +21,9 @@ $definicionTabla = "CREATE TABLE IF NOT EXISTS registros(
     address_user TEXT NOT NULL,
     department_user TEXT NOT NULL,
     city_user TEXT NOT NULL,
-    date_creation DATE        
+    code TEXT NOT NULL,  
+    date_creation DATE
+      
 );";
 
 $resultado = $pdo->exec($definicionTabla);
