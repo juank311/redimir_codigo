@@ -5,14 +5,17 @@
     date_default_timezone_set('America/Bogota');
 
     //
-$min = 1;
-$max = 999;
-$numero_1 = rand($min, $max);
-$numero_2 = rand($min, $max);
-$code = intval($numero_1 * $numero_2)/5;
+
 
    
 if (isset($_POST['btnRegistrarse'])) {
+
+    $min = 1;
+    $max = 999;
+    $numero_1 = rand($min, $max);
+    $numero_2 = rand($min, $max);
+    $code_2 = ($numero_1 * $numero_2)/5;
+    $code = intval($code_2);
     
     $niu_user = $_POST['niu_user'];
     $name_user = $_POST['name_user'];
